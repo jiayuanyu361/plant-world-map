@@ -2,10 +2,25 @@
 
 import { randomUUID } from "crypto";
 import { revalidatePath } from "next/cache";
+import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { requireAdmin, requireUser } from "@/lib/data/plants";
 import { toTagArray } from "@/lib/utils";
+
+async function getSiteUrl() {
+  const headerStore = await headers();
+  const forwardedProto = headerStore.get("x-forwarded-proto");
+  const forwardedHost = headerStore.get("x-forwarded-host");
+  const host = forwardedHost ?? headerStore.get("host");
+
+  if (!host) {
+    return "http://localhost:3000";
+  }
+
+  const protocol = forwardedProto ?? (host.includes("localhost") ? "http" : "https");
+  return `${protocol}://${host}`;
+}
 
 async function uploadPlantImage(file: File) {
   const supabase = await createSupabaseServerClient();
@@ -47,11 +62,13 @@ export async function signUpAction(formData: FormData) {
   const password = String(formData.get("password") ?? "");
   const username = String(formData.get("username") ?? "");
   const supabase = await createSupabaseServerClient();
+  const siteUrl = await getSiteUrl();
 
   const { error } = await supabase.auth.signUp({
     email,
     password,
     options: {
+      emailRedirectTo: `${siteUrl}/auth/callback`,
       data: {
         username
       }
