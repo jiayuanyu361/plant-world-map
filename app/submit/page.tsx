@@ -15,12 +15,13 @@ export default async function SubmitPage({ searchParams }: SubmitPageProps) {
   if (!user) {
     return (
       <div className="panel rounded-[32px] p-8">
-        <h1 className="text-3xl font-semibold">提交植物前请先登录</h1>
-        <p className="mt-3 text-[var(--muted)]">
-          登录后才能提交新的植物记录，并自动关联到你的账号。
+        <p className="eyebrow">Sign In First</p>
+        <h1 className="title-page mt-3">Please sign in before submitting a plant</h1>
+        <p className="text-subtle mt-3 max-w-2xl">
+          Sign in so your submission can be connected to your account and move smoothly through the review flow.
         </p>
         <Link href="/auth" className="btn btn-primary mt-6">
-          去登录
+          Go to Sign In / Register
         </Link>
       </div>
     );

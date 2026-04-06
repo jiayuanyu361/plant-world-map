@@ -1,5 +1,15 @@
 export type PlantStatus = "pending" | "approved" | "rejected";
 
+export type PlantAtlasInfo = {
+  scientific_name?: string | null;
+  season?: string | null;
+  viewing_season?: string | null;
+  region?: string | null;
+  region_focus?: string | null;
+  habitat?: string | null;
+  flower_meaning?: string | null;
+};
+
 export type UserProfile = {
   id: string;
   username: string | null;
@@ -18,6 +28,7 @@ export type Plant = {
   status: PlantStatus;
   created_at: string;
   created_by: string | null;
+  atlas?: PlantAtlasInfo | null;
   user_profiles?: Pick<UserProfile, "username" | "avatar_url"> | null;
 };
 

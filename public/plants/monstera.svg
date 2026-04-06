@@ -1,0 +1,22 @@
+﻿<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" rx="72" fill="#EEF2E8"/>
+  <rect x="44" y="44" width="712" height="712" rx="52" fill="url(#bg)"/>
+  <circle cx="400" cy="320" r="180" fill="url(#halo)" opacity="0.85"/>
+  <path d="M404 528V272" stroke="#2F6F46" stroke-width="20" stroke-linecap="round"/>
+  <path d="M412 300C520 300 590 240 616 132C506 124 438 180 412 300Z" fill="#6D9C7B"/>
+  <path d="M394 336C286 336 214 274 184 170C296 160 364 214 394 336Z" fill="#4E7E58"/>
+  <path d="M412 410C518 410 578 348 596 250C498 250 436 304 412 410Z" fill="#86B492"/>
+  <path d="M390 450C298 450 232 396 208 304C306 300 364 350 390 450Z" fill="#7CA187"/>
+  <text x="76" y="706" fill="#1F3B2D" font-size="44" font-family="Segoe UI, PingFang SC, sans-serif" font-weight="700">热带观叶</text>
+  <text x="76" y="750" fill="#58705D" font-size="24" font-family="Segoe UI, PingFang SC, sans-serif">MONSTERA</text>
+  <defs>
+    <linearGradient id="bg" x1="96" y1="80" x2="712" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8F6EF"/>
+      <stop offset="1" stop-color="#E0E8D6"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(400 320) rotate(90) scale(220)">
+      <stop stop-color="#D8E6CA"/>
+      <stop offset="1" stop-color="#D8E6CA" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

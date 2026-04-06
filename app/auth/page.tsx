@@ -12,10 +12,11 @@ export default async function AuthPage({ searchParams }: AuthPageProps) {
   return (
     <div className="space-y-6">
       <section className="panel rounded-[32px] p-8">
-        <h1 className="text-4xl font-bold tracking-tight">登录与注册</h1>
-        <p className="mt-4 max-w-2xl leading-7 text-[var(--muted)]">
-          用户系统基于 Supabase Auth。注册后会自动在 `user_profiles` 建立资料，
-          登录用户可以发表评论，也可以提交新的植物记录。
+        <p className="eyebrow">Account Access</p>
+        <h1 className="title-page mt-3">Sign in or create an account to join the map</h1>
+        <p className="text-subtle mt-4 max-w-2xl">
+          Authentication is powered by Supabase Auth. Once signed in, you can comment, submit new plants,
+          and help grow this shared map with the community.
         </p>
       </section>
       <AuthForms error={error} message={message} />

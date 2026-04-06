@@ -8,31 +8,33 @@ type AuthFormsProps = {
 export function AuthForms({ error, message }: AuthFormsProps) {
   return (
     <div className="grid gap-6 lg:grid-cols-2">
-      <section className="panel rounded-[28px] p-6">
-        <h2 className="text-2xl font-semibold">登录</h2>
-        <p className="mt-2 text-sm text-[var(--muted)]">
-          使用邮箱和密码登录，发表评论与提交植物。
+      <section className="panel rounded-[28px] p-6 md:p-7">
+        <p className="eyebrow">Sign In</p>
+        <h2 className="title-section mt-3">Continue your plant journey</h2>
+        <p className="text-subtle mt-2">
+          Use your email and password to comment, submit new discoveries, and stay part of the community.
         </p>
         <form action={signInAction} className="mt-6 space-y-4">
-          <input className="field" name="email" type="email" placeholder="邮箱" required />
-          <input className="field" name="password" type="password" placeholder="密码" required />
+          <input className="field" name="email" type="email" placeholder="Email" required />
+          <input className="field" name="password" type="password" placeholder="Password" required />
           <button className="btn btn-primary w-full" type="submit">
-            登录
+            Sign In
           </button>
         </form>
       </section>
 
-      <section className="panel rounded-[28px] p-6">
-        <h2 className="text-2xl font-semibold">注册</h2>
-        <p className="mt-2 text-sm text-[var(--muted)]">
-          创建账户后即可分享你在世界各地发现的植物。
+      <section className="panel rounded-[28px] p-6 md:p-7">
+        <p className="eyebrow">Create Account</p>
+        <h2 className="title-section mt-3">Join the plant map community</h2>
+        <p className="text-subtle mt-2">
+          Create an account to share plants you have discovered and take part in the conversation.
         </p>
         <form action={signUpAction} className="mt-6 space-y-4">
-          <input className="field" name="username" type="text" placeholder="用户名" required />
-          <input className="field" name="email" type="email" placeholder="邮箱" required />
-          <input className="field" name="password" type="password" placeholder="密码" required />
+          <input className="field" name="username" type="text" placeholder="Username" required />
+          <input className="field" name="email" type="email" placeholder="Email" required />
+          <input className="field" name="password" type="password" placeholder="Password" required />
           <button className="btn btn-primary w-full" type="submit">
-            注册
+            Register and Start Exploring
           </button>
         </form>
       </section>

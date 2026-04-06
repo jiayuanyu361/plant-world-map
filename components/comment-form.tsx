@@ -9,10 +9,10 @@ type CommentFormProps = {
 export function CommentForm({ plantId, canComment }: CommentFormProps) {
   if (!canComment) {
     return (
-      <div className="rounded-[24px] border border-dashed border-[var(--border)] p-5 text-sm text-[var(--muted)]">
-        登录后可以发表评论。
+      <div className="rounded-[24px] border border-dashed border-[var(--border)] p-5 text-subtle">
+        Sign in to leave a comment and share your observations, growing tips, or location stories.
         <Link href="/auth" className="ml-2 font-semibold text-[var(--accent)]">
-          去登录
+          Sign in
         </Link>
       </div>
     );
@@ -26,10 +26,10 @@ export function CommentForm({ plantId, canComment }: CommentFormProps) {
         required
         rows={4}
         className="field"
-        placeholder="写下你对这株植物的观察、种植经验或地点故事..."
+        placeholder="Share what you noticed about this plant, how you care for it, or the story behind where it was found..."
       />
       <button className="btn btn-primary" type="submit">
-        发布评论
+        Post Comment
       </button>
     </form>
   );

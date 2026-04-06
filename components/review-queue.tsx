@@ -9,8 +9,8 @@ type ReviewQueueProps = {
 export function ReviewQueue({ plants }: ReviewQueueProps) {
   if (!plants.length) {
     return (
-      <div className="panel rounded-[28px] p-6 text-[var(--muted)]">
-        当前没有待审核植物。
+      <div className="panel rounded-[28px] p-6 text-subtle">
+        There are no plants waiting for review right now.
       </div>
     );
   }
@@ -25,16 +25,16 @@ export function ReviewQueue({ plants }: ReviewQueueProps) {
                 <img src={plant.image_url} alt={plant.name} className="h-full w-full object-cover" />
               ) : (
                 <div className="flex h-full items-center justify-center text-sm text-[var(--muted)]">
-                  无图片
+                  No image
                 </div>
               )}
             </div>
             <div>
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
-                  <h2 className="text-2xl font-semibold">{plant.name}</h2>
-                  <p className="mt-2 text-sm text-[var(--muted)]">
-                    坐标：{plant.latitude}, {plant.longitude}
+                  <h2 className="title-section">{plant.name}</h2>
+                  <p className="text-note mt-2">
+                    Coordinates: {plant.latitude}, {plant.longitude}
                   </p>
                 </div>
                 <div className="flex gap-3">
@@ -54,7 +54,7 @@ export function ReviewQueue({ plants }: ReviewQueueProps) {
                   </form>
                 </div>
               </div>
-              <p className="mt-4 leading-7 text-[var(--foreground)]/85">{plant.description}</p>
+              <p className="text-body mt-4">{plant.description}</p>
               <TagList tags={plant.tags ?? []} className="mt-4" />
             </div>
           </div>

@@ -10,6 +10,8 @@
   --accent: #355f3b;
   --accent-strong: #1e4025;
   --accent-soft: #dce8cc;
+  --surface-soft: rgba(255, 255, 255, 0.74);
+  --surface-strong: rgba(255, 255, 255, 0.9);
 }
 
 * {
@@ -29,11 +31,33 @@ body {
     linear-gradient(160deg, #f8f4ed 0%, #edf2e2 100%);
   color: var(--foreground);
   font-family: "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+  line-height: 1.6;
+}
+
+body:has(.home-stage) {
+  background: linear-gradient(180deg, #f7f2e9 0%, #eef2e6 100%);
+  color: #203025;
+}
+
+body:has(.home-stage) header.shell,
+body:has(.home-stage) footer.shell {
+  display: none;
+}
+
+body:has(.home-stage) main {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
 }
 
 .shell {
@@ -48,50 +72,220 @@ a {
   box-shadow: 0 20px 60px rgba(31, 51, 29, 0.08);
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border-radius: 999px;
-  padding: 10px 18px;
-  font-size: 14px;
-  font-weight: 600;
-  transition: 180ms ease;
-  cursor: pointer;
+.card-soft {
+  border: 1px solid rgba(39, 68, 45, 0.12);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(248, 252, 244, 0.84));
+  box-shadow: 0 16px 38px rgba(31, 51, 29, 0.06);
+}
+
+.home-stage {
+  position: relative;
+  isolation: isolate;
+}
+
+.home-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.44) 0, transparent 1.1px),
+    radial-gradient(circle at 78% 24%, rgba(255, 255, 255, 0.28) 0, transparent 0.9px),
+    radial-gradient(circle at 66% 72%, rgba(255, 255, 255, 0.24) 0, transparent 0.8px);
+  background-size: 240px 240px, 280px 280px, 320px 320px;
+  pointer-events: none;
+  opacity: 0.08;
+}
+
+.home-stage .leaflet-container {
+  position: relative;
+  background: linear-gradient(180deg, #edf2ea 0%, #e7ede4 100%);
+  font-family: "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+}
+
+.home-stage .leaflet-tile-pane {
+  filter: saturate(0.82) brightness(1.03) contrast(0.92);
+  opacity: 0.98;
+}
+
+.home-stage .leaflet-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 240;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(243, 241, 235, 0.06) 0%, rgba(244, 242, 236, 0) 28%, rgba(239, 236, 228, 0.08) 100%),
+    radial-gradient(circle at 24% 28%, rgba(180, 201, 188, 0.1), transparent 24%),
+    radial-gradient(circle at 72% 30%, rgba(186, 205, 174, 0.08), transparent 20%);
+}
+
+.home-stage .leaflet-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 245;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image:
+    radial-gradient(circle at 20% 24%, rgba(84, 102, 88, 0.8) 0, transparent 0.8px),
+    radial-gradient(circle at 72% 32%, rgba(84, 102, 88, 0.6) 0, transparent 0.7px),
+    radial-gradient(circle at 48% 68%, rgba(84, 102, 88, 0.55) 0, transparent 0.6px);
+  background-size: 140px 140px, 160px 160px, 180px 180px;
+}
+
+.home-stage .leaflet-map-pane {
+  z-index: 200;
+}
+
+.home-stage .leaflet-marker-pane {
+  z-index: 620;
+}
+
+.home-stage .leaflet-tooltip-pane {
+  z-index: 900;
+}
+
+.home-stage .leaflet-popup-pane {
+  z-index: 980;
+}
+
+.home-stage .leaflet-control-zoom {
+  border: 1px solid rgba(185, 196, 180, 0.85);
+  box-shadow: 0 14px 28px rgba(55, 69, 49, 0.08);
+}
+
+.home-stage .leaflet-control-zoom a {
+  background: rgba(250, 249, 245, 0.95);
+  color: #334236;
+  border-bottom-color: rgba(203, 213, 196, 0.72);
+}
+
+.home-stage .leaflet-control-zoom a:hover {
+  background: #ffffff;
+}
+
+.home-stage .leaflet-control-attribution {
+  background: rgba(250, 249, 245, 0.74);
+  color: rgba(85, 101, 86, 0.78);
+  backdrop-filter: blur(10px);
+}
+
+.home-stage .leaflet-control-attribution a {
+  color: rgba(56, 76, 58, 0.88);
+}
+
+.home-stage .leaflet-tooltip {
+  border: 1px solid rgba(205, 214, 199, 0.88);
+  background: rgba(252, 250, 245, 0.94);
+  color: #233528;
+  box-shadow: 0 12px 24px rgba(55, 69, 49, 0.08);
+}
+
+.home-stage .leaflet-tooltip::before {
+  border-top-color: rgba(252, 250, 245, 0.94);
+}
+
+.atlas-marker {
+  background: transparent;
   border: none;
 }
 
-.btn-primary {
-  background: var(--accent);
-  color: white;
+.atlas-marker__node {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 180ms ease;
 }
 
-.btn-primary:hover {
-  background: var(--accent-strong);
+.atlas-marker__shadow,
+.atlas-marker__halo,
+.atlas-marker__pin {
+  position: absolute;
+  border-radius: 999px;
 }
 
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.6);
-  color: var(--accent-strong);
-  border: 1px solid var(--border);
+.atlas-marker__shadow {
+  inset: 11px;
+  background: radial-gradient(circle, rgba(78, 110, 84, 0.18), transparent 68%);
+  filter: blur(10px);
+  opacity: 0.72;
 }
 
-.btn-secondary:hover {
-  background: white;
+.atlas-marker__halo--outer {
+  inset: 6px;
+  background: radial-gradient(circle, rgba(170, 194, 158, 0.24), transparent 72%);
 }
 
-.field {
-  width: 100%;
-  border-radius: 16px;
-  border: 1px solid rgba(39, 68, 45, 0.14);
-  background: rgba(255, 255, 255, 0.8);
-  padding: 12px 14px;
-  color: var(--foreground);
-  outline: none;
+.atlas-marker__halo--inner {
+  inset: 10px;
+  background: radial-gradient(circle, rgba(202, 222, 190, 0.28), transparent 70%);
 }
 
-.field:focus {
-  border-color: rgba(53, 95, 59, 0.55);
-  box-shadow: 0 0 0 4px rgba(53, 95, 59, 0.12);
+.atlas-marker__pin {
+  inset: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow:
+    0 12px 22px rgba(49, 64, 42, 0.18),
+    0 0 0 1px rgba(224, 232, 218, 0.95) inset;
+}
+
+.atlas-marker__emoji {
+  font-size: 16px;
+  line-height: 1;
+  transform: translateY(0.5px);
+}
+
+.atlas-marker:hover .atlas-marker__node,
+.atlas-marker.is-active .atlas-marker__node {
+  transform: scale(1.12);
+}
+
+.atlas-marker:hover .atlas-marker__pin,
+.atlas-marker.is-active .atlas-marker__pin {
+  box-shadow:
+    0 14px 26px rgba(49, 64, 42, 0.22),
+    0 0 0 1px rgba(214, 225, 206, 0.98) inset;
+}
+
+.atlas-marker:hover .atlas-marker__halo--outer,
+.atlas-marker.is-active .atlas-marker__halo--outer {
+  background: radial-gradient(circle, rgba(170, 194, 158, 0.34), transparent 72%);
+}
+
+.atlas-placeholder {
+  background:
+    radial-gradient(circle at 30% 28%, rgba(208, 224, 194, 0.8), transparent 24%),
+    radial-gradient(circle at 68% 32%, rgba(194, 218, 185, 0.75), transparent 20%),
+    linear-gradient(180deg, #eef3e8 0%, #dde7d4 100%);
+}
+
+.atlas-placeholder-2 {
+  background:
+    radial-gradient(circle at 32% 26%, rgba(217, 229, 200, 0.86), transparent 24%),
+    radial-gradient(circle at 72% 38%, rgba(201, 221, 192, 0.7), transparent 22%),
+    linear-gradient(180deg, #f0f4eb 0%, #e2ead8 100%);
+}
+
+.atlas-placeholder-3 {
+  background:
+    radial-gradient(circle at 28% 26%, rgba(219, 228, 204, 0.84), transparent 22%),
+    radial-gradient(circle at 70% 40%, rgba(190, 210, 184, 0.72), transparent 22%),
+    linear-gradient(180deg, #edf2e5 0%, #dfe6d7 100%);
+}
+
+@keyframes atlas-card-in {
+  0% {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

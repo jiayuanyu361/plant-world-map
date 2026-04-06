@@ -14,10 +14,10 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
   return (
     <div className="space-y-6">
       <section className="panel rounded-[32px] p-8">
-        <h1 className="text-4xl font-bold tracking-tight">Admin Review Queue</h1>
-        <p className="mt-4 max-w-2xl leading-7 text-[var(--muted)]">
-          这里展示所有 `pending` 状态的植物。管理员可以执行 approve / reject，
-          审核通过后该植物会出现在地图首页。
+        <p className="eyebrow">Review Dashboard</p>
+        <h1 className="title-page mt-3">Pending plant submissions</h1>
+        <p className="text-subtle mt-4 max-w-2xl">
+          Review plants that are waiting for approval. Once approved, they become visible on the homepage map.
         </p>
         {error ? (
           <p className="mt-4 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">

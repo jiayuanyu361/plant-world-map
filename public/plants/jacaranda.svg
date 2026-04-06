@@ -1,0 +1,21 @@
+﻿<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" rx="72" fill="#F5F1EB"/>
+  <rect x="44" y="44" width="712" height="712" rx="52" fill="url(#bg)"/>
+  <circle cx="400" cy="326" r="190" fill="url(#halo)" opacity="0.88"/>
+  <path d="M400 548V256" stroke="#7B5A79" stroke-width="16" stroke-linecap="round"/>
+  <path d="M400 260L322 346L400 402L478 346L400 260Z" fill="#A97FB0"/>
+  <path d="M400 318L290 394L358 486L400 430L442 486L510 394L400 318Z" fill="#8A6AA2"/>
+  <path d="M400 190C430 154 470 136 516 134C500 186 466 230 420 262L400 190Z" fill="#B58BC5"/>
+  <text x="76" y="706" fill="#2F2A35" font-size="44" font-family="Segoe UI, PingFang SC, sans-serif" font-weight="700">蓝花楹</text>
+  <text x="76" y="750" fill="#6F6680" font-size="24" font-family="Segoe UI, PingFang SC, sans-serif">JACARANDA BLOOM</text>
+  <defs>
+    <linearGradient id="bg" x1="96" y1="80" x2="708" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FAF7F3"/>
+      <stop offset="1" stop-color="#E8DFEE"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(400 326) rotate(90) scale(240)">
+      <stop stop-color="#E5D7EF"/>
+      <stop offset="1" stop-color="#E5D7EF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

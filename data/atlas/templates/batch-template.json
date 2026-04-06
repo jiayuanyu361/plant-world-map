@@ -1,0 +1,26 @@
+﻿[
+  {
+    "slug": "plant-slug-city",
+    "name": "植物中文名",
+    "scientific_name": "Scientific name",
+    "description": "一句适合站内展示的中文描述。",
+    "image_url": "/plants/atlas/plant.jpg",
+    "latitude": 0,
+    "longitude": 0,
+    "tags": ["观花", "庭院"],
+    "season": "春季",
+    "region": "东亚",
+    "region_focus": "中国东部与温带城市",
+    "habitat": "公园、庭院或山地",
+    "viewing_season": "早春至仲春",
+    "flower_meaning": "可选，只有花卉类再填写",
+    "source": "manual-curation",
+    "source_name": "Manual Curation",
+    "source_record_id": "optional-source-id",
+    "source_url": "https://example.com/reference",
+    "image_license": "已审核图片许可",
+    "image_attribution": "署名信息",
+    "status": "approved",
+    "catalog_status": "approved"
+  }
+]

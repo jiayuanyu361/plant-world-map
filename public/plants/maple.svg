@@ -1,0 +1,22 @@
+﻿<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" rx="72" fill="#F3F0E8"/>
+  <rect x="44" y="44" width="712" height="712" rx="52" fill="url(#bg)"/>
+  <circle cx="404" cy="324" r="188" fill="url(#halo)" opacity="0.82"/>
+  <path d="M402 552V248" stroke="#9B643D" stroke-width="16" stroke-linecap="round"/>
+  <path d="M402 282C498 260 566 198 606 104C510 104 432 164 402 282Z" fill="#C96E74"/>
+  <path d="M402 320C520 320 602 252 642 160C522 152 442 210 402 320Z" fill="#B64549"/>
+  <path d="M394 314C290 312 214 250 170 158C282 152 354 214 394 314Z" fill="#D6885A"/>
+  <path d="M394 382C282 382 204 320 168 230C286 226 356 286 394 382Z" fill="#E8A655"/>
+  <text x="76" y="706" fill="#2D2A24" font-size="44" font-family="Segoe UI, PingFang SC, sans-serif" font-weight="700">日本红枫</text>
+  <text x="76" y="750" fill="#7D6A58" font-size="24" font-family="Segoe UI, PingFang SC, sans-serif">MAPLE CANOPY</text>
+  <defs>
+    <linearGradient id="bg" x1="88" y1="80" x2="708" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F4EE"/>
+      <stop offset="1" stop-color="#F0E2D1"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(404 324) rotate(90) scale(238)">
+      <stop stop-color="#F2D8BA"/>
+      <stop offset="1" stop-color="#F2D8BA" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

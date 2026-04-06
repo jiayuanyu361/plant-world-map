@@ -1,0 +1,21 @@
+﻿<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" rx="72" fill="#F4F0E8"/>
+  <rect x="44" y="44" width="712" height="712" rx="52" fill="url(#bg)"/>
+  <circle cx="400" cy="330" r="180" fill="url(#halo)" opacity="0.8"/>
+  <path d="M402 548V312" stroke="#5C8A64" stroke-width="14" stroke-linecap="round"/>
+  <path d="M400 232C454 232 496 270 496 324C496 378 454 416 400 416C346 416 304 378 304 324C304 270 346 232 400 232Z" fill="#B99FD8"/>
+  <path d="M400 250C436 250 464 280 464 316C464 352 436 382 400 382C364 382 336 352 336 316C336 280 364 250 400 250Z" fill="#9A80C4"/>
+  <path d="M400 268C428 268 450 290 450 318C450 346 428 368 400 368C372 368 350 346 350 318C350 290 372 268 400 268Z" fill="#E7DFF5"/>
+  <text x="76" y="706" fill="#2A2927" font-size="44" font-family="Segoe UI, PingFang SC, sans-serif" font-weight="700">薰衣草</text>
+  <text x="76" y="750" fill="#6F6A79" font-size="24" font-family="Segoe UI, PingFang SC, sans-serif">LAVENDER FIELD</text>
+  <defs>
+    <linearGradient id="bg" x1="90" y1="80" x2="710" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8F5F1"/>
+      <stop offset="1" stop-color="#E9E0F2"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(400 330) rotate(90) scale(230)">
+      <stop stop-color="#E5DDF3"/>
+      <stop offset="1" stop-color="#E5DDF3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Leaf } from "lucide-react";
 import "./globals.css";
 import { Header } from "@/components/header";
 
 export const metadata: Metadata = {
   title: "Plant World Map",
-  description: "Share and discover plants around the world."
+  description: "Discover, record, and share plant stories from around the world on a living map."
 };
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
+    <html lang="en">
       <body>
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-lime-200/40 blur-3xl" />
